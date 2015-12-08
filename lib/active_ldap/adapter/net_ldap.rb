@@ -77,6 +77,7 @@ module ActiveLdap
             :attributes => attrs,
             :size => limit,
             :paged_searches_supported => paged_results_supported,
+	    :ignore_server_caps => true
           }
           info = {
             :base => base, :scope => scope_name(scope),
