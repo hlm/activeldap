@@ -98,8 +98,8 @@ module ActiveLdap
               :filter             => filter,
               :attributes         => attrs,
               :limit              => limit,
-              :use_paged_results  => use_paged_results
-	      :ignore_server_caps => true
+              :use_paged_results  => use_paged_results,
+              :ignore_server_caps => true
             }
             execute(:search_full, info, options) do |entry|
               attributes = {}
