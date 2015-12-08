@@ -76,13 +76,13 @@ module ActiveLdap
             :filter => filter,
             :attributes => attrs,
             :size => limit,
-            :paged_searches_supported => paged_results_supported,
+            :use_paged_results => false,
 	    :ignore_server_caps => true
           }
           info = {
             :base => base, :scope => scope_name(scope),
             :filter => filter, :attributes => attrs, :limit => limit,
-            :paged_results_supported => paged_results_supported,
+            :use_paged_results => false,
           }
           execute(:search, info, args) do |entry|
             attributes = {}
