@@ -93,12 +93,13 @@ module ActiveLdap
               :filter => filter, :attributes => attrs, :limit => limit,
             }
             options = {
-              :base              => base,
-              :scope             => scope,
-              :filter            => filter,
-              :attributes        => attrs,
-              :limit             => limit,
-              :use_paged_results => use_paged_results
+              :base               => base,
+              :scope              => scope,
+              :filter             => filter,
+              :attributes         => attrs,
+              :limit              => limit,
+              :use_paged_results  => use_paged_results
+	      :ignore_server_caps => true
             }
             execute(:search_full, info, options) do |entry|
               attributes = {}
