@@ -83,6 +83,7 @@ module ActiveLdap
             :base => base, :scope => scope_name(scope),
             :filter => filter, :attributes => attrs, :limit => limit,
             :use_paged_results => false,
+	    :ignore_server_caps => true
           }
           execute(:search, info, args) do |entry|
             attributes = {}
